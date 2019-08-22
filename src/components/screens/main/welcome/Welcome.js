@@ -56,8 +56,8 @@ type Props = {
 
 /*
   To have access to the menu to choose the types of questions, do the following:
-  - Uncomment lines 68 and 74
-  - Commenet lines 67 and 73
+  - Uncomment lines 68, 74 and 75
+  - Commenet lines 67, 73 and 76
  */
 
 const Welcome = ({ LOCAL_STACK_ROUTES, navigation }: Props) => (
@@ -72,7 +72,8 @@ const Welcome = ({ LOCAL_STACK_ROUTES, navigation }: Props) => (
       <NavigationButton
         onPress={() => navigation.navigate(LOCAL_STACK_ROUTES.QUESTIONS)}
         // onPress={() => navigation.navigate(LOCAL_STACK_ROUTES.SETUP_QUESTIONS)}
-        text="CHOOSE QUESTIONS"
+        // text="CHOOSE QUESTIONS"
+        text="START"
         isDisabled={false}
       />
       <SupportedByContainer>
