@@ -54,7 +54,7 @@ type Props = {
   navigation: Navigation,
 };
 
-/**
+/*
   To have access to the menu to choose the types of questions, do the following:
   - Uncomment lines 68 and 74
   - Commenet lines 67 and 73
