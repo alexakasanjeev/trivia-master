@@ -112,6 +112,7 @@ const Questions = ({ LOCAL_STACK_ROUTES, navigation }: Props) => {
       onSelectAnswer={onSelectAnswer}
       selectedAnswer={selectedAnswer}
       getQuestions={getQuestions}
+      userAnswers={userAnswers}
       noResult={noResult}
       loading={loading}
       questions={data}

@@ -42,6 +42,7 @@ const NavigationButtonWrapper = styled(View)`
 
 type Question = {
   incorrectAnswers: Array<string>,
+  options: Array<string>,
   correctAnswer: string,
   difficulty: string,
   category: string,
@@ -53,6 +54,7 @@ type Props = {
   onChangeParametersButtonPressed: Function,
   onPressNavigationButton: Function,
   currentQuestionIndex: number,
+  userAnswers: Array<string>,
   questions: Array<Question>,
   onSelectAnswer: Function,
   questionsListRef: Object,
@@ -71,6 +73,7 @@ const QuestionsComponent = ({
   onSelectAnswer,
   selectedAnswer,
   getQuestions,
+  userAnswers,
   noResult,
   questions,
   loading,
@@ -111,6 +114,7 @@ const QuestionsComponent = ({
       }}
       showsHorizontalScrollIndicator={false}
       keyExtractor={(item) => item.question}
+      extraData={userAnswers}
       ref={questionsListRef}
       scrollEnabled={false}
       data={questions}
