@@ -34,12 +34,10 @@ const Questions = ({ LOCAL_STACK_ROUTES, navigation }: Props) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [userAnswers, setUserAnswers] = useState([]);
-
-  const {
-    loading, noResult, error, data,
-  } = useSelector(
-    (state) => state.questions,
-  );
+  const loading = useSelector((state) => state.questions.loading);
+  const noResult = useSelector((state) => state.questions.noResult);
+  const error = useSelector((state) => state.questions.error);
+  const data = useSelector((state) => state.questions.data);
 
   const questionsListRef: QuestionListRef = useRef(null);
   const dispatch = useDispatch();

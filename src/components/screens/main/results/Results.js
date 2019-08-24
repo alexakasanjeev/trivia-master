@@ -20,7 +20,8 @@ type Props = {
 };
 
 const Results = ({ navigation }: Props) => {
-  const { data, scores } = useSelector((state) => state.results);
+  const data = useSelector((state) => state.results.data);
+  const scores = useSelector((state) => state.results.scores);
   const dispatch = useDispatch();
 
   useEffect(() => {
